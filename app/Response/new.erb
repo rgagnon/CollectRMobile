@@ -1,0 +1,40 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @response.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @response.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="response[section_id]" class="fieldLabel">Section</label>
+            <input type="text" id="response[section_id]" name="response[section_id]" <%= placeholder("Section") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="response[question_value_id]" class="fieldLabel">Question value</label>
+            <input type="text" id="response[question_value_id]" name="response[question_value_id]" <%= placeholder("Question value") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="response[question_id]" class="fieldLabel">Question</label>
+            <input type="text" id="response[question_id]" name="response[question_id]" <%= placeholder("Question") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="response[value]" class="fieldLabel">Value</label>
+            <input type="text" id="response[value]" name="response[value]" <%= placeholder("Value") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @response.section_id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @response.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">SectionId</td>
+        <td class="itemValue"><%= @response.section_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">QuestionValueId</td>
+        <td class="itemValue"><%= @response.question_value_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">QuestionId</td>
+        <td class="itemValue"><%= @response.question_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Value</td>
+        <td class="itemValue"><%= @response.value%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,48 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New FormTemplate</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @formtemplate.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Name fr: </td>
+                <td class="itemValue"><input type="text" name="formtemplate[name_fr]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Name en: </td>
+                <td class="itemValue"><input type="text" name="formtemplate[name_en]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Description fr: </td>
+                <td class="itemValue"><input type="text" name="formtemplate[description_fr]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Description en: </td>
+                <td class="itemValue"><input type="text" name="formtemplate[description_en]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Effective date: </td>
+                <td class="itemValue"><input type="text" name="formtemplate[effective_date]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">End date: </td>
+                <td class="itemValue"><input type="text" name="formtemplate[end_date]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

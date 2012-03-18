@@ -1,0 +1,39 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @response.section_id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @response.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">SectionId</div>
+            <div class="itemValue"><%= @response.section_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">QuestionValueId</div>
+            <div class="itemValue"><%= @response.question_value_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">QuestionId</div>
+            <div class="itemValue"><%= @response.question_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Value</div>
+            <div class="itemValue"><%= @response.value %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

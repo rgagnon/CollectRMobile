@@ -1,0 +1,65 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @sectiontemplate.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @sectiontemplate.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[form_template_id]" class="fieldLabel">Form template</label>
+            <input type="text" id="sectiontemplate[form_template_id]" name="sectiontemplate[form_template_id]" <%= placeholder("Form template") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[section_id_parent]" class="fieldLabel">Section id parent</label>
+            <input type="text" id="sectiontemplate[section_id_parent]" name="sectiontemplate[section_id_parent]" <%= placeholder("Section id parent") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[section_type_id]" class="fieldLabel">Section type</label>
+            <input type="text" id="sectiontemplate[section_type_id]" name="sectiontemplate[section_type_id]" <%= placeholder("Section type") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[name_fr]" class="fieldLabel">Name fr</label>
+            <input type="text" id="sectiontemplate[name_fr]" name="sectiontemplate[name_fr]" <%= placeholder("Name fr") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[name_en]" class="fieldLabel">Name en</label>
+            <input type="text" id="sectiontemplate[name_en]" name="sectiontemplate[name_en]" <%= placeholder("Name en") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[effective_date]" class="fieldLabel">Effective date</label>
+            <input type="text" id="sectiontemplate[effective_date]" name="sectiontemplate[effective_date]" <%= placeholder("Effective date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[end_date]" class="fieldLabel">End date</label>
+            <input type="text" id="sectiontemplate[end_date]" name="sectiontemplate[end_date]" <%= placeholder("End date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[is_conditionnal]" class="fieldLabel">Is conditionnal</label>
+            <input type="text" id="sectiontemplate[is_conditionnal]" name="sectiontemplate[is_conditionnal]" <%= placeholder("Is conditionnal") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sectiontemplate[order]" class="fieldLabel">Order</label>
+            <input type="text" id="sectiontemplate[order]" name="sectiontemplate[order]" <%= placeholder("Order") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

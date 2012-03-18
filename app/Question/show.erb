@@ -1,0 +1,89 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @question.section_id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @question.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">SectionId</div>
+            <div class="itemValue"><%= @question.section_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">DataTypeId</div>
+            <div class="itemValue"><%= @question.data_type_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">LabelFr</div>
+            <div class="itemValue"><%= @question.label_fr %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">LabelEn</div>
+            <div class="itemValue"><%= @question.label_en %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">HelpFr</div>
+            <div class="itemValue"><%= @question.help_fr %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">HelpEn</div>
+            <div class="itemValue"><%= @question.help_en %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IsMultipleChoice</div>
+            <div class="itemValue"><%= @question.is_multiple_choice %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EffectiveDate</div>
+            <div class="itemValue"><%= @question.effective_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EndDate</div>
+            <div class="itemValue"><%= @question.end_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Order</div>
+            <div class="itemValue"><%= @question.order %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Precision</div>
+            <div class="itemValue"><%= @question.precision %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Scale</div>
+            <div class="itemValue"><%= @question.scale %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MinValue</div>
+            <div class="itemValue"><%= @question.min_value %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MaxValue</div>
+            <div class="itemValue"><%= @question.max_value %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

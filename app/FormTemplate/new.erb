@@ -1,0 +1,50 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @formtemplate.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @formtemplate.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="formtemplate[name_fr]" class="fieldLabel">Name fr</label>
+            <input type="text" id="formtemplate[name_fr]" name="formtemplate[name_fr]" <%= placeholder("Name fr") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="formtemplate[name_en]" class="fieldLabel">Name en</label>
+            <input type="text" id="formtemplate[name_en]" name="formtemplate[name_en]" <%= placeholder("Name en") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="formtemplate[description_fr]" class="fieldLabel">Description fr</label>
+            <input type="text" id="formtemplate[description_fr]" name="formtemplate[description_fr]" <%= placeholder("Description fr") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="formtemplate[description_en]" class="fieldLabel">Description en</label>
+            <input type="text" id="formtemplate[description_en]" name="formtemplate[description_en]" <%= placeholder("Description en") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="formtemplate[effective_date]" class="fieldLabel">Effective date</label>
+            <input type="text" id="formtemplate[effective_date]" name="formtemplate[effective_date]" <%= placeholder("Effective date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="formtemplate[end_date]" class="fieldLabel">End date</label>
+            <input type="text" id="formtemplate[end_date]" name="formtemplate[end_date]" <%= placeholder("End date") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

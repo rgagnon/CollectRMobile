@@ -1,0 +1,45 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @formtemplate.name_fr %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @formtemplate.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">NameFr</td>
+        <td class="itemValue"><%= @formtemplate.name_fr%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">NameEn</td>
+        <td class="itemValue"><%= @formtemplate.name_en%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">DescriptionFr</td>
+        <td class="itemValue"><%= @formtemplate.description_fr%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">DescriptionEn</td>
+        <td class="itemValue"><%= @formtemplate.description_en%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">EffectiveDate</td>
+        <td class="itemValue"><%= @formtemplate.effective_date%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">EndDate</td>
+        <td class="itemValue"><%= @formtemplate.end_date%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

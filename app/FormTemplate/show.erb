@@ -1,0 +1,49 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @formtemplate.name_fr %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @formtemplate.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">NameFr</div>
+            <div class="itemValue"><%= @formtemplate.name_fr %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NameEn</div>
+            <div class="itemValue"><%= @formtemplate.name_en %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">DescriptionFr</div>
+            <div class="itemValue"><%= @formtemplate.description_fr %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">DescriptionEn</div>
+            <div class="itemValue"><%= @formtemplate.description_en %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EffectiveDate</div>
+            <div class="itemValue"><%= @formtemplate.effective_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EndDate</div>
+            <div class="itemValue"><%= @formtemplate.end_date %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

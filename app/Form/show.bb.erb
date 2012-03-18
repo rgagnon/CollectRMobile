@@ -1,0 +1,20 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @form.form_template_id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @form.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">FormTemplateId</td>
+        <td class="itemValue"><%= @form.form_template_id%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @questionvalue.question_id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @questionvalue.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">QuestionId</div>
+            <div class="itemValue"><%= @questionvalue.question_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ValueFr</div>
+            <div class="itemValue"><%= @questionvalue.value_fr %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ValueEn</div>
+            <div class="itemValue"><%= @questionvalue.value_en %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Order</div>
+            <div class="itemValue"><%= @questionvalue.order %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EffectiveDate</div>
+            <div class="itemValue"><%= @questionvalue.effective_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EndDate</div>
+            <div class="itemValue"><%= @questionvalue.end_date %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

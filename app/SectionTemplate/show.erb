@@ -1,0 +1,64 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @sectiontemplate.form_template_id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @sectiontemplate.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">FormTemplateId</div>
+            <div class="itemValue"><%= @sectiontemplate.form_template_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SectionIdParent</div>
+            <div class="itemValue"><%= @sectiontemplate.section_id_parent %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SectionTypeId</div>
+            <div class="itemValue"><%= @sectiontemplate.section_type_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NameFr</div>
+            <div class="itemValue"><%= @sectiontemplate.name_fr %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NameEn</div>
+            <div class="itemValue"><%= @sectiontemplate.name_en %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EffectiveDate</div>
+            <div class="itemValue"><%= @sectiontemplate.effective_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EndDate</div>
+            <div class="itemValue"><%= @sectiontemplate.end_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IsConditionnal</div>
+            <div class="itemValue"><%= @sectiontemplate.is_conditionnal %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Order</div>
+            <div class="itemValue"><%= @sectiontemplate.order %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>
